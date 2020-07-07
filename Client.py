@@ -18,8 +18,6 @@ import datetime
 import json
 
 # 填写 apiKey APISECRET
-apiKey = 'EDF07FEF-02E9-4E5A-B171-B2A9A7E48207'
-secretKey = '059e9f6cfad083e092446325377b02570fb92d59e33006719c57d6d43b4f1572'
 
 # address
 btcAddress = 'your btc address'
