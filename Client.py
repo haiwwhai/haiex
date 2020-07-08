@@ -18,6 +18,8 @@ import datetime
 import json
 
 # 填写 apiKey APISECRET
+apiKey = 'EDF07FEF-02E9-4E5A-B171-B2A9A7E48207'
+secretKey = '059e9f6cfad083e092446325377b02570fb92d59e33006719c57d6d43b4f1572'
 
 # address
 btcAddress = 'your btc address'
@@ -113,6 +115,14 @@ while True:
         df['EMA3'] = talib.EMA(np.array(close), timeperiod=3)  
         df['EMA9'] = talib.EMA(np.array(close), timeperiod=9)
         df['EMA18'] = talib.EMA(np.array(close), timeperiod=18)
+        #KDJ
+        df['slowk'], df['slowd'] = talib.STOCH(high, low, close,
+                        fastk_period=9,
+                        slowk_period=3,
+                        slowk_matype=0,
+                        slowd_period=3,
+                        slowd_matype=0)
+        df['slowj'] = 3* df['slowk'] - 2* df['slowd']
         #df['ATR'] = talib.ATR(high, low, close, 14)
         #print(df)
         #df.to_csv('./test.csv', encoding='utf-8', index=None)
@@ -123,28 +133,41 @@ while True:
         #for i in range(33,nn-1):            
         if ((df.iloc[119, 6] < df.iloc[119, 7]) & (df.iloc[120, 6] > df.iloc[120, 7]) & (df.iloc[120, 9] > df.iloc[120, 10]) & (df.iloc[120, 10] > df.iloc[120, 11])):
             print("MACD/EMA金叉的日期：" + str(df.index[120]),datetime.datetime.fromtimestamp(df.iloc[120, 0]/1000))
+            f = open('./data.txt',"a")
             f.write("MACD/EMA金叉的日期：" + str(df.index[120]) + str(datetime.datetime.fromtimestamp(df.iloc[120, 0]/1000)) + '\n')
+            f.close()
             coin_status = '↓↓↓↑↑↑'
             interval = 1 #second
             coin_ticker = myTicker(currency_pair,coin_status)
-            coin_buy = gate_trade.buy(currencyPair,coin_ticker['last'], 1)
+            coin_buy = json.loads(gate_trade.buy(currency_pair,coin_ticker['last'], 1))
+            print(coin_buy)
             if coin_buy['result']:
+                f = open('./data.txt',"a")
                 f.write(str(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())) + " 买入1个EOS成功日期：" + '\n')
+                f.close()
                 print('买入1个EOS成功！')   
-                
-                myBalances = json.load(gate_trade.balances())
-                if myBalances['result'] :
-                     coin_sell = gate_trade.sell(currencyPair, float(coin_buy['filledAmount'],format(float(coin_buy['filledRate']*1.01),'.4f')))
-                     if coin_sell['result']:
-                         f.write(str(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())) + " 卖出EOS成功日期：" + '\n')
-                         print('卖出挂单成功！')                     
+                check_order = json.loads(gate_trade.getOrder(coin_buy['orderNumber'],currency_pair))
+                print(check_order)
+                if check_order['order']['status'] == 'closed' :
+                    myBalances = json.loads(gate_trade.balances())
+                    print(myBalances)
+                    if float(myBalances['available']['EOS']) > 30 :
+                        coin_sell = json.loads(gate_trade.sell(currency_pair, format(float(coin_buy['filledRate'])*1.01,'.4f'),1))
+                        print(coin_sell)
+                        if coin_sell['result']:
+                            f = open('./data.txt',"a")
+                            f.write(str(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())) + " 卖出EOS成功日期：" + '\n')
+                            f.close()
+                            print('卖出挂单成功！')                     
         else:
             coin_status = 'Normal'
             interval = 10 #second 
             
         if ((df.iloc[119, 6] > df.iloc[119, 7]) & (df.iloc[120, 6] < df.iloc[120, 7])):
             print("MACD 死叉的日期：" + str(df.index[120]),datetime.datetime.fromtimestamp(df.iloc[120, 0]/1000))
-            f.write("MACD 死叉的日期：" + str(df.index[120]) + str(datetime.datetime.fromtimestamp(df.iloc[120, 0]/1000)) + '\n')
+            f = open('./data.txt',"a")
+            f.write("MACD 死叉的日期：" + str(datetime.datetime.fromtimestamp(df.iloc[120, 0]/1000)) + '\n')
+            f.close()
             interval = 1 #second
             coin_status = '↑↑↑↓↓↓'
         else:
@@ -156,7 +179,7 @@ while True:
         time.sleep(random.random()/3 + interval)   
     except IOError:
         print("Exception when calling API!")
-        time.sleep(random.random()/3 + 0.1)
+        time.sleep(random.random()/3 + 1)
 
 # Trading Pairs
 #print(gate_query.pairs())
