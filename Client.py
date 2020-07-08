@@ -10,7 +10,7 @@
 from gateAPI import GateIO
 import time
 import talib
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import random
@@ -132,20 +132,20 @@ while True:
         
         #for i in range(33,nn-1):            
         if ((df.iloc[119, 6] < df.iloc[119, 7]) & (df.iloc[120, 6] > df.iloc[120, 7]) & (df.iloc[120, 9] > df.iloc[120, 10]) & (df.iloc[120, 10] > df.iloc[120, 11])):
-            print("MACD/EMA金叉的日期：" + str(df.index[120]),datetime.datetime.fromtimestamp(df.iloc[120, 0]/1000))
+            print("MACD/EMA up date：" + str(df.index[120]),datetime.datetime.fromtimestamp(df.iloc[120, 0]/1000))
             f = open('./data.txt',"a")
-            f.write("MACD/EMA金叉的日期：" + str(df.index[120]) + str(datetime.datetime.fromtimestamp(df.iloc[120, 0]/1000)) + '\n')
+            f.write("MACD/EMA up date：" + str(df.index[120]) + str(datetime.datetime.fromtimestamp(df.iloc[120, 0]/1000)) + '\n')
             f.close()
-            coin_status = '↓↓↓↑↑↑'
+            coin_status = 'upupup'
             interval = 1 #second
             coin_ticker = myTicker(currency_pair,coin_status)
             coin_buy = json.loads(gate_trade.buy(currency_pair,coin_ticker['last'], 1))
             print(coin_buy)
             if coin_buy['result']:
                 f = open('./data.txt',"a")
-                f.write(str(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())) + " 买入1个EOS成功日期：" + '\n')
+                f.write(str(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())) + " Buy one EOS date：" + '\n')
                 f.close()
-                print('买入1个EOS成功！')   
+                print('Sucess buy one EOS！')   
                 check_order = json.loads(gate_trade.getOrder(coin_buy['orderNumber'],currency_pair))
                 print(check_order)
                 if check_order['order']['status'] == 'closed' :
@@ -156,20 +156,20 @@ while True:
                         print(coin_sell)
                         if coin_sell['result']:
                             f = open('./data.txt',"a")
-                            f.write(str(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())) + " 卖出EOS成功日期：" + '\n')
+                            f.write(str(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())) + " Sell EOS date：" + '\n')
                             f.close()
-                            print('卖出挂单成功！')                     
+                            print('Sucess Sell one EOS！')                     
         else:
             coin_status = 'Normal'
             interval = 10 #second 
             
         if ((df.iloc[119, 6] > df.iloc[119, 7]) & (df.iloc[120, 6] < df.iloc[120, 7])):
-            print("MACD 死叉的日期：" + str(df.index[120]),datetime.datetime.fromtimestamp(df.iloc[120, 0]/1000))
+            print("MACD down date：" + str(df.index[120]),datetime.datetime.fromtimestamp(df.iloc[120, 0]/1000))
             f = open('./data.txt',"a")
-            f.write("MACD 死叉的日期：" + str(datetime.datetime.fromtimestamp(df.iloc[120, 0]/1000)) + '\n')
+            f.write("MACD down date：" + str(datetime.datetime.fromtimestamp(df.iloc[120, 0]/1000)) + '\n')
             f.close()
             interval = 1 #second
-            coin_status = '↑↑↑↓↓↓'
+            coin_status = 'downdown'
         else:
             coin_status = 'Normal'
             interval = 10 #second 
