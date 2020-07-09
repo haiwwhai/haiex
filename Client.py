@@ -124,49 +124,52 @@ while True:
                         slowd_matype=0)
         df['slowj'] = 3* df['slowk'] - 2* df['slowd']
         #df['ATR'] = talib.ATR(high, low, close, 14)
-        #print(df)
+        print(df.iloc[120, 12],'  ',df.iloc[120, 13],'  ',df.iloc[120, 14])
         #df.to_csv('./test.csv', encoding='utf-8', index=None)
         #print('成功写入')
-        nn = df.shape[0]
-        coin_avg = close.sum()/nn #近期平均值
+        #nn = df.shape[0]
+        #coin_avg = close.sum()/nn #近期平均值
         
         #for i in range(33,nn-1):            
-        if ((df.iloc[119, 6] < df.iloc[119, 7]) & (df.iloc[120, 6] > df.iloc[120, 7]) & (df.iloc[120, 9] > df.iloc[120, 10]) & (df.iloc[120, 10] > df.iloc[120, 11])):
-            print("MACD/EMA up date：" + str(df.index[120]),datetime.datetime.fromtimestamp(df.iloc[120, 0]/1000))
+        if ((df.iloc[119, 6] < df.iloc[119, 7]) & (df.iloc[120, 6] > df.iloc[120, 7]) ):
+            print("MACD/EMA up date:" + str(df.index[120]),datetime.datetime.fromtimestamp(df.iloc[120, 0]/1000))
             f = open('./data.txt',"a")
-            f.write("MACD/EMA up date：" + str(df.index[120]) + str(datetime.datetime.fromtimestamp(df.iloc[120, 0]/1000)) + '\n')
+            f.write("MACD/EMA up date:" + str(df.index[120]) + str(datetime.datetime.fromtimestamp(df.iloc[120, 0]/1000)) + '\n')
             f.close()
             coin_status = 'upupup'
             interval = 1 #second
             coin_ticker = myTicker(currency_pair,coin_status)
-            coin_buy = json.loads(gate_trade.buy(currency_pair,coin_ticker['last'], 1))
+            coin_buy = json.loads(gate_trade.buy(currency_pair,float(coin_ticker['last']), 1))
             print(coin_buy)
             if coin_buy['result']:
                 f = open('./data.txt',"a")
-                f.write(str(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())) + " Buy one EOS date：" + '\n')
+                f.write(str(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())) + " Buy one EOS date:" + '\n')
                 f.close()
                 print('Sucess buy one EOS！')   
                 check_order = json.loads(gate_trade.getOrder(coin_buy['orderNumber'],currency_pair))
-                print(check_order)
+                #print(check_order)
+                time.sleep(3) #for buy close
                 if check_order['order']['status'] == 'closed' :
                     myBalances = json.loads(gate_trade.balances())
                     print(myBalances)
-                    if float(myBalances['available']['EOS']) > 30 :
+                    if float(myBalances['available']['EOS']) > 20 and float(myBalances['available']['USDT']) > 50 :
                         coin_sell = json.loads(gate_trade.sell(currency_pair, format(float(coin_buy['filledRate'])*1.01,'.4f'),1))
                         print(coin_sell)
                         if coin_sell['result']:
                             f = open('./data.txt',"a")
                             f.write(str(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())) + " Sell EOS date：" + '\n')
                             f.close()
-                            print('Sucess Sell one EOS！')                     
+                            print('Sucess Sell one EOS！')  
+                    else:
+                        print('No enough cash!')                           
         else:
             coin_status = 'Normal'
             interval = 10 #second 
             
         if ((df.iloc[119, 6] > df.iloc[119, 7]) & (df.iloc[120, 6] < df.iloc[120, 7])):
-            print("MACD down date：" + str(df.index[120]),datetime.datetime.fromtimestamp(df.iloc[120, 0]/1000))
+            print("MACD down date:" + str(df.index[120]),datetime.datetime.fromtimestamp(df.iloc[120, 0]/1000))
             f = open('./data.txt',"a")
-            f.write("MACD down date：" + str(datetime.datetime.fromtimestamp(df.iloc[120, 0]/1000)) + '\n')
+            f.write("MACD down date:" + str(datetime.datetime.fromtimestamp(df.iloc[120, 0]/1000)) + '\n')
             f.close()
             interval = 1 #second
             coin_status = 'downdown'
