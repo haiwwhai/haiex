@@ -98,6 +98,26 @@ def myCandle(currency_pair,GROUP_SEC,RANGE_HOUR):
             time.sleep(random.random()/3 + 0.1) 
     return df
 
+def recalc_order():
+    #gate_trade.cancelAllOrders('buy', currency_pair)
+    ss = json.loads(gate_trade.openOrders())['orders']
+    #print(len(ss))
+    if len(ss) > 1:
+        sum = 0
+        qty = 0
+        for i in ss:
+            if i['type'] == 'sell':
+                sum += float(i['total'])
+                qty += float(i['amount'])
+        #print(sum,' ', qty)
+        cancel_allsell_order = json.loads(gate_trade.cancelAllOrders('sell', currency_pair))
+        if (cancel_allsell_order['result'] == True) and  (cancel_allsell_order['message'] == 'Success' ):
+            new_sell_rate = format(sum / qty,'.4f')
+            sell_neworder = json.loads(gate_trade.sell(currency_pair,str(new_sell_rate),str(qty)))
+            if sell_neworder['message'] == 'Success' :
+                print('Re calc and sell EOS order!',sum,qty,new_sell_rate,'\n')   
+        time.sleep(random.random()/3 + interval) 
+
 f = open('./data.txt',"a")
 while True:
     try:
@@ -124,14 +144,14 @@ while True:
                         slowd_matype=0)
         df['slowj'] = 3* df['slowk'] - 2* df['slowd']
         #df['ATR'] = talib.ATR(high, low, close, 14)
-        print(df.iloc[120, 12],'  ',df.iloc[120, 13],'  ',df.iloc[120, 14])
+        #print(df.iloc[120, 12],'  ',df.iloc[120, 13],'  ',df.iloc[120, 14])
         #df.to_csv('./test.csv', encoding='utf-8', index=None)
         #print('成功写入')
         #nn = df.shape[0]
         #coin_avg = close.sum()/nn #近期平均值
         
         #for i in range(33,nn-1):            
-        if ((df.iloc[119, 6] < df.iloc[119, 7]) & (df.iloc[120, 6] > df.iloc[120, 7]) ):
+        if ((df.iloc[119, 6] < df.iloc[119, 7]) & (df.iloc[120, 6] > df.iloc[120, 7]) & (df.iloc[120, 14]>df.iloc[120, 12]) & (df.iloc[120, 12] > df.iloc[120, 13]) ):
             print("MACD/EMA up date:" + str(df.index[120]),datetime.datetime.fromtimestamp(df.iloc[120, 0]/1000))
             f = open('./data.txt',"a")
             f.write("MACD/EMA up date:" + str(df.index[120]) + str(datetime.datetime.fromtimestamp(df.iloc[120, 0]/1000)) + '\n')
@@ -139,7 +159,7 @@ while True:
             coin_status = 'upupup'
             interval = 1 #second
             coin_ticker = myTicker(currency_pair,coin_status)
-            coin_buy = json.loads(gate_trade.buy(currency_pair,float(coin_ticker['last']), 1))
+            coin_buy = json.loads(gate_trade.buy(currency_pair, str(coin_ticker['last']), '1'))
             print(coin_buy)
             if coin_buy['result']:
                 f = open('./data.txt',"a")
@@ -148,12 +168,12 @@ while True:
                 print('Sucess buy one EOS！')   
                 check_order = json.loads(gate_trade.getOrder(coin_buy['orderNumber'],currency_pair))
                 #print(check_order)
-                time.sleep(3) #for buy close
+                time.sleep(5) #for buy close
                 if check_order['order']['status'] == 'closed' :
                     myBalances = json.loads(gate_trade.balances())
-                    print(myBalances)
+                    #print(myBalances)
                     if float(myBalances['available']['EOS']) > 20 and float(myBalances['available']['USDT']) > 50 :
-                        coin_sell = json.loads(gate_trade.sell(currency_pair, format(float(coin_buy['filledRate'])*1.01,'.4f'),1))
+                        coin_sell = json.loads(gate_trade.sell(currency_pair, str(format(float(coin_buy['filledRate'])*1.01,'.4f')),'1'))
                         print(coin_sell)
                         if coin_sell['result']:
                             f = open('./data.txt',"a")
@@ -161,7 +181,8 @@ while True:
                             f.close()
                             print('Sucess Sell one EOS！')  
                     else:
-                        print('No enough cash!')                           
+                        print('No enough cash!') 
+                               
         else:
             coin_status = 'Normal'
             interval = 10 #second 
@@ -178,7 +199,7 @@ while True:
             interval = 10 #second 
 
 
-
+        recalc_order() #re calc sell all order
         time.sleep(random.random()/3 + interval)   
     except IOError:
         print("Exception when calling API!")
