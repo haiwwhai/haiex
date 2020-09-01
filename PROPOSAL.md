@@ -3,15 +3,15 @@ P!nkSwap Proposal
 ===================================
 A substrate chain with fully function of AMM swap and govanence.
 ## Proposal description
-> An overall description.
-> - Feature
+ An overall description.
+ - Feature
 >  1. Pricing for Parathread native token.
 >  2. New DOT to be the first pricing token to any other token as the position of BTC in any other CEX. 
->  Which will be another way to capture the value of New DOT. The second pricing token may possible be any New DOT backed stable coin created by any other team. And after the PINKSWAP deployed and run for a well with stable performance, the PINK token will be introduced.
+>  And after the PINKSWAP deployed and run for a well with stable performance, the PINK token will be introduced.
 >  3. Increasing Paras (Parachain and Parathread) native token swap.
 >  4. Decentralized Liquidity Providing, we say the de-AMM natively on Polkadot.
-> - Initialtive
-    A AMM bonding curve will be applied and will be improved as community developing. 
+ - Initialtive
+>  A AMM bonding curve will be applied and will be improved as community developing. 
 
 ## System Overview
 > Token ticker: PINK
@@ -74,5 +74,5 @@ Basically, the 3 targets above is the
 > To join and welcome more ecosystem
 
 
-
+ Which will be another way to capture the value of New DOT. The second pricing token may possible be any New DOT backed stable coin created by any other team. And after the PINKSWAP deployed and run for a well with stable performance, the PINK token will be introduced.
 
