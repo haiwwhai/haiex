@@ -1,5 +1,5 @@
 
-# P!nkSwap Proposal
+P!nkSwap Proposal
 ===================================
 A substrate chain with fully function of AMM swap and govanence.
 ## Proposal description
