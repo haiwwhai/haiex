@@ -32,7 +32,8 @@ And further more, the pricing model will also be used as a assessment way or gro
 Along with the first target to be realized, the second one for other users to swap amoung Paras Native Tokens will also be realized at the same time.
 >3)	Decentralized Liquidity Providing, we say the de-AMM natively on Polkadot.
 This part will almost the same of uniswap provided for ethereum.
-Basically, the 3 targets above is the 
+
+Basically, the 3 targets above is the goal for PINKSWAP to provide and achive.
 
 ## Value
 > In which way your project will benefit Polkadot
