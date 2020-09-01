@@ -4,7 +4,7 @@
 A substrate chain with fully function of AMM swap and govanence.
 ## Proposal description
 > An overall description.
-> - Purpose
+> - Feature
 >  1. Pricing for Parathread native token.
 >  2. New DOT to be the first pricing token to any other token as the position of BTC in any other CEX. 
 >  Which will be another way to capture the value of New DOT. The second pricing token may possible be any New DOT backed stable coin created by any other team. And after the PINKSWAP deployed and run for a well with stable performance, the PINK token will be introduced.
