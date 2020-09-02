@@ -49,20 +49,15 @@ Trading fees will be paid on any token that the liquidity provider intented to u
 
 
 ## Roadmap and Milestones
-1. Run a demo POC in polkadot
-2. Setup the UI and public
-3. Adding new feature
-4. Make as parachain KSM
-5. introduce a token PINK
 
 | No. | Timeline | Milestones |
 | --- | --- | --- |
-| 1 | August 19, 2019 | September 30, 2019, 11:59PM PT |
-| 2 | October 1, 2019 | January 15, 2020, 11:59PM PT |
-| 3 | January 16, 2020 | April 15, 2020, 11:59PM PT |
-| 4 | April 16, 2020 | June 30, 2020, 11:59PM PT |
-| 5 | July 1, 2020 | September 30, 2020, 11:59PM PT |
-| 6 | October 1, 2020 | January 15, 2021, 11:59PM PT |
+| 1 | September, 2020 |Run a demo POC in polkadot |
+| 2 | October, 2020 | Setup the UI and public |
+| 3 | Novembver, 2020 | Adding new feature |
+| 4 | December, 2020 | Make as parachain KSM |
+| 5 | January, 2021 | introduce a token PINK |
+
 ## Total Budget Requested
 
 
