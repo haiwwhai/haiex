@@ -25,8 +25,10 @@ Collators must then submit block candidates with an associated bid in DOT. This 
 
 >PINKSWAP will provide the service firstly for the Collators to swap the Paras native token to DOT or only read the exact price at the time when they are willing to. Noted here is the price will be with potential liquidity like the uniswap provided, which means the tokens could be swapped on the price indicated with the amount that AMMer provided. If do so, no need external price feed.
 And further more, the pricing model will also be used as a assessment way or ground rule to select the parathread which may possible to be a parachain.
+
 >2)	Paras (Parachain and Parathread) native token swap.
 Along with the first target to be realized, the second one for other users to swap amoung Paras Native Tokens will also be realized at the same time.
+
 >3)	Decentralized Liquidity Providing, we say the de-AMM natively on Polkadot.
 This part will almost the same of uniswap provided for ethereum.
 
