@@ -52,12 +52,14 @@ Trading fees will be paid on any token that the liquidity provider intented to u
 ## Value
 > In which way your project will benefit Polkadot
 > - A fully decentralized protocol for automated liquidity provision on polkdot.
-> - Enables anyone to create new markets and provide liquidity of new DOT.
+> - Enable anyone to create new markets and provide liquidity of new DOT.
 > - Popularize polkdot technology and accelerate ecosystem construction
 
 ## Deliverables
-Please describe in details what your final deliverable for this project will be. Include a specification of the project and what functionality the software will deliver when it is finished.
 
+1.Provide a framwork for bonding curve design
+2.Introduce a new token in polkdot community - PINK
+3.Create a UI and to improve the ecosystem
 ## Roadmap and Milestones
 
 | No. | Timeline | Milestones |
@@ -71,7 +73,6 @@ Please describe in details what your final deliverable for this project will be.
 
 ## Total Budget Requested
 
-Sum up the total requested budget across all milestones, and include that figure here. Also, please include a budget breakdown to specify how you are planning to spend these funds.
 | No. | Timeline | Budget breakdown |
 | --- | --- | --- |
 | 1 | Run a demo POC as Testnet |$5k |
