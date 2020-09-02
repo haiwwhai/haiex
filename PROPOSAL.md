@@ -52,11 +52,12 @@ Trading fees will be paid on any token that the liquidity provider intented to u
 
 | No. | Timeline | Milestones |
 | --- | --- | --- |
-| 1 | September, 2020 |Run a demo POC in polkadot |
+| 1 | September, 2020 |Run a demo POC as Testnet |
 | 2 | October, 2020 | Setup the UI and public |
-| 3 | Novembver, 2020 | Adding new feature |
-| 4 | December, 2020 | Make as parachain KSM |
-| 5 | January, 2021 | introduce a token PINK |
+| 3 | Novembver, 2020 | Design the bonding curve |
+| 4 | December, 2020 | Make as a parachain of KSM |
+| 5 | January, 2021 | Introduce a token PINK |
+| 6 | February, 2021 | Run Mainnet |
 
 ## Total Budget Requested
 
