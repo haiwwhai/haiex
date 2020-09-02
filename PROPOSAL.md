@@ -17,7 +17,7 @@ A substrate chain with fully function of AMM swap and govanence.
 
 As all we have seen and engaged these days about DEFI and AMM platform in Ethereum ecosystem, they are the great breakthrough in DEX, we thought which is the exactly the one point that Polkadot is designed to and natively compatible of.
 
->  So we are trying to design a mechanism on Polkadot which somehow like uniswap on Ethereum, which is aiming on 3 targets as follows:
+So we are trying to design a mechanism on Polkadot which somehow like uniswap on Ethereum, which is aiming on 3 targets as follows:
 
 >1)	Pricing for Parathread native token.
 >Polkadot gives the change of any chain which is willing to be secured by DOT being able to temporarily participate (on a block by block basis) in Polkadot security without needing to lease a dedicated parachain slot. In this case, the Collators to determine which Parathread’s block will be collected on a per block basis by the values of the collected Parathread native tokens if they have.
