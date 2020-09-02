@@ -37,6 +37,8 @@ The AMM bonding curve could be upgraded based on PINK token holder.
 
 Trading fees will be paid on any token that the liquidity provider intented to use. Primarily would be New DOT. Gas fees will be paid on New DOT.
 
+ Which will be another way to capture the value of New DOT. The second pricing token may possible be any New DOT backed stable coin created by any other team. And after the PINKSWAP deployed and run for a well with stable performance, the PINK token will be introduced.
+ 
 ## Value
 > In which way your project will benefit Polkadot
 > - What are the benefits of getting this right
@@ -69,11 +71,16 @@ Trading fees will be paid on any token that the liquidity provider intented to u
 
 
 ## Future
-> To provide common framwork
-> to provide bonding curve
-> service parathread token and extention
-> To join and welcome more ecosystem
+> To provide common framwork based on subtrate technology
+
+> To continue imporve and provide diversity bonding curves 
+
+> To serve pricing of parathread token and ecosystem extention
+
+> To join more communication in community
 
 
- Which will be another way to capture the value of New DOT. The second pricing token may possible be any New DOT backed stable coin created by any other team. And after the PINKSWAP deployed and run for a well with stable performance, the PINK token will be introduced.
+
+
+
 
