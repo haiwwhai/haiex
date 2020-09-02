@@ -9,7 +9,9 @@
 P!nkSwap Proposal
 ===================================
 A substrate chain with fully function of AMM swap and govanence.
+
 ## Proposal description
+
  An overall description.
  - Feature
 >  1. Pricing for Parathread native token.
@@ -41,6 +43,7 @@ This part will almost the same of uniswap provided for ethereum.
 Basically, the 3 targets above are the main purposes for PINKSWAP to provide and achive. Which will be another way to capture the value of New DOT. The second pricing token may possible be any New DOT backed stable coin created by any other team. And after the PINKSWAP deployed and run for a well with stable performance, the PINK token will be introduced. 
  
 ## Value
+
 > In which way your project will benefit Polkadot
 > - A fully decentralized protocol for automated liquidity provision on Polkadot.
 > - Enable anyone to create new markets and provide liquidity of new DOT.
@@ -48,11 +51,11 @@ Basically, the 3 targets above are the main purposes for PINKSWAP to provide and
 
 ## Deliverables
 
-1.Provide a framwork for bonding curve design
+1.Provide a framwork for bonding curve design basked on Polkadot
 
 2.Introduce a new token ticker in Polkadot community - PINK
 
-3.Create a UI to improve  the ecosystem
+3.Create a UI to interface with community and improve the ecosystem
 
 ## Roadmap and Milestones
 
@@ -76,6 +79,7 @@ Basically, the 3 targets above are the main purposes for PINKSWAP to provide and
 | 5 | Introduce a token PINK | $10k  |
 | 6 | Run Mainnet | $5k |
 | 7 | Total | $50k |
+
 ## Maintenance and Upgrade Plans
 
 
