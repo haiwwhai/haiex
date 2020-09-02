@@ -70,8 +70,17 @@ Please describe in details what your final deliverable for this project will be.
 | 6 | February, 2021 | Run Mainnet |
 
 ## Total Budget Requested
-Sum up the total requested budget across all milestones, and include that figure here. Also, please include a budget breakdown to specify how you are planning to spend these funds.
 
+Sum up the total requested budget across all milestones, and include that figure here. Also, please include a budget breakdown to specify how you are planning to spend these funds.
+| No. | Timeline | Budget breakdown |
+| --- | --- | --- |
+| 1 | Run a demo POC as Testnet |$5k |
+| 2 | Setup the UI and public | $5k |
+| 3 | Design the bonding curve | $10k |
+| 4 | Make as a parachain of KSM | $15k |
+| 5 | Introduce a token PINK | $10k  |
+| 6 | Run Mainnet | $5k |
+| 7 | Total | $50k |
 ## Maintenance and Upgrade Plans
 
 
