@@ -20,10 +20,10 @@ As all we have seen and engaged these days about DEFI and AMM platform in Ethere
 So we are trying to design a mechanism on Polkadot which somehow like uniswap on Ethereum, which is aiming on 3 targets as follows:
 
 >1)	Pricing for Parathread native token.
->Polkadot gives the change of any chain which is willing to be secured by DOT being able to temporarily participate (on a block by block basis) in Polkadot security without needing to lease a dedicated parachain slot. In this case, the Collators to determine which Parathread’s block will be collected on a per block basis by the values of the collected Parathread native tokens if they have.
+>-Polkadot gives the change of any chain which is willing to be secured by DOT being able to temporarily participate (on a block by block basis) in Polkadot security without needing to lease a dedicated parachain slot. In this case, the Collators to determine which Parathread’s block will be collected on a per block basis by the values of the collected Parathread native tokens if they have.
 Collators must then submit block candidates with an associated bid in DOT. This means that if the parathread offers a local currency, the collator will need to understand the exchange rate between this currency and DOT in order to place a proper DOT bid on the Relay Chain and ensure that they make a profit.
 
->PINKSWAP will provide the service firstly for the Collators to swap the Paras native token to DOT or only read the exact price at the time when they are willing to. Noted here is the price will be with potential liquidity like the uniswap provided, which means the tokens could be swapped on the price indicated with the amount that AMMer provided. If do so, no need external price feed.
+>-PINKSWAP will provide the service firstly for the Collators to swap the Paras native token to DOT or only read the exact price at the time when they are willing to. Noted here is the price will be with potential liquidity like the uniswap provided, which means the tokens could be swapped on the price indicated with the amount that AMMer provided. If do so, no need external price feed.
 And further more, the pricing model will also be used as a assessment way or ground rule to select the parathread which may possible to be a parachain.
 
 >2)	Paras (Parachain and Parathread) native token swap.
