@@ -6,7 +6,7 @@
 **Proposal Category:**  `app-dev`
 
 
-P!nkSwap Proposal
+P!nkSwap
 ===================================
 A substrate chain with fully function of AMM swap and govanence.
 
@@ -95,7 +95,7 @@ And after the PINKSWAP deployed and run for a well with stable performance, the 
 
 ## Relevant Experience
 
-Please describe (in words) your team's relevant experience, and why you think you are the right team to build this project. You can cite your team's prior experience in similar domains, doing similar dev work, individual team members' backgrounds, etc.
+> Have experience to run POC in polkadot, for instance, Polka.io>
 
 ## Future
 > To provide common framwork based on subtrate technology
