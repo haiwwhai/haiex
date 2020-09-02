@@ -11,7 +11,7 @@ A substrate chain with fully function of AMM swap and govanence.
 >  3. Increasing Paras (Parachain and Parathread) native token swap.
 >  4. Decentralized Liquidity Providing, we say the de-AMM natively on Polkadot.
  - Initialtive
->  A AMM bonding curve will be applied and will be improved as community developing. 
+>   A AMM bonding curve will be applied and will be improved as community developing. 
 
 ## System Overview
 Token ticker: PINK
