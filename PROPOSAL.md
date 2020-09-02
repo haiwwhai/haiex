@@ -5,8 +5,6 @@
 
 **Proposal Category:**  `app-dev`
 
-**Do you agree to open source all work you do on behalf of this RFP and dual-license under MIT and APACHE2 licenses?:**  "Yes" 
-
 
 P!nkSwap Proposal
 ===================================
