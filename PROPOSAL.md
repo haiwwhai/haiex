@@ -40,7 +40,9 @@ Along with the first target to be realized, the second one for other users to sw
 >3)	Decentralized Liquidity Providing, we say the de-AMM natively on Polkadot.
 This part will almost the same of uniswap provided for ethereum.
 
-Basically, the 3 targets above are the main purposes for PINKSWAP to provide and achive. Which will be another way to capture the value of New DOT. The second pricing token may possible be any New DOT backed stable coin created by any other team. And after the PINKSWAP deployed and run for a well with stable performance, the PINK token will be introduced. 
+Basically, the 3 targets above are the main purposes for PINKSWAP to provide and achive. Which will be another way to capture the value of New DOT. The second pricing token may possible be any New DOT backed stable coin created by any other team. 
+
+And after the PINKSWAP deployed and run for a well with stable performance, the PINK token will be introduced. 
  
 ## Value
 
@@ -81,10 +83,19 @@ Basically, the 3 targets above are the main purposes for PINKSWAP to provide and
 | 7 | Total | $50k |
 
 ## Maintenance and Upgrade Plans
-
+- Follow up Polkadot Mainnet maintenance and upgrade
+- Appreciate community and new DOT/PINK holder option 
+- Improving the bounding curve design to keep liquidity
 
 ## Team members
 
+- Team Member 1 
+- Team Member 2 
+- Team Member 3 
+
+## Relevant Experience
+
+Please describe (in words) your team's relevant experience, and why you think you are the right team to build this project. You can cite your team's prior experience in similar domains, doing similar dev work, individual team members' backgrounds, etc.
 
 ## Future
 > To provide common framwork based on subtrate technology
