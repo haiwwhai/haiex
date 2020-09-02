@@ -30,8 +30,11 @@ Along with the first target to be realized, the second one for other users to sw
 This part will almost the same of uniswap provided for ethereum.
 
 Basically, the 3 targets above is the goal for PINKSWAP to provide and achive.
+
 Token ticker: PINK
+
 The AMM bonding curve could be upgraded based on PINK token holder.
+
 Trading fees will be paid on any token that the liquidity provider intented to use. Primarily would be New DOT. Gas fees will be paid on New DOT.
 
 ## Value
@@ -39,7 +42,8 @@ Trading fees will be paid on any token that the liquidity provider intented to u
 > - What are the benefits of getting this right
 > - What are the risks if you don't get it right?
 > - What are the risks that will make executing on this project difficult?
-> 
+> - is a fully decentralized protocol for automated liquidity provision on Ethereum.
+> - Enables anyone to create new markets, provide liquidity, and build financial applications that could not have existed before.
 
 ## Deliverables
 
@@ -50,6 +54,7 @@ Trading fees will be paid on any token that the liquidity provider intented to u
 3. Adding new feature
 4. Make as parachain KSM
 5. introduce a token PINK
+
 | No. | Timeline | Milestones |
 | --- | --- | --- |
 | 1 | August 19, 2019 | September 30, 2019, 11:59PM PT |
