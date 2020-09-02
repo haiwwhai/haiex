@@ -96,6 +96,7 @@ And after the PINKSWAP deployed and run for a well with stable performance, the 
 ## Relevant Experience
 
 > Have experience to run POC in polkadot
+
 > Experience to make app such as polkadt explorer - Polka.io 
 
 ## Future
