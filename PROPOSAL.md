@@ -34,32 +34,27 @@ Collators must then submit block candidates with an associated bid in DOT. This 
 And further more, the pricing model will also be used as a assessment way or ground rule to select the parathread which may possible to be a parachain.
 
 >2)	Paras (Parachain and Parathread) native token swap.
-Along with the first target to be realized, the second one for other users to swap amoung Paras Native Tokens will also be realized at the same time.
+Along with the first target to be realized, the second one for other users to swap amoung Paras Native Tokens will also be realized at the same time. Trading fees will be paid on any token that the liquidity provider intented to use. Primarily would be New DOT. Gas fees will be paid on New DOT.
 
 >3)	Decentralized Liquidity Providing, we say the de-AMM natively on Polkadot.
 This part will almost the same of uniswap provided for ethereum.
 
-Basically, the 3 targets above are the main purposes for PINKSWAP to provide and achive. Which will be another way to capture the value of New DOT. The second pricing token may possible be any New DOT backed stable coin created by any other team. And after the PINKSWAP deployed and run for a well with stable performance, the PINK token will be introduced.
-
-Token ticker: PINK
-
-The AMM bonding curve could be upgraded based on PINK token holder.
-
-Trading fees will be paid on any token that the liquidity provider intented to use. Primarily would be New DOT. Gas fees will be paid on New DOT.
-
- 
+Basically, the 3 targets above are the main purposes for PINKSWAP to provide and achive. Which will be another way to capture the value of New DOT. The second pricing token may possible be any New DOT backed stable coin created by any other team. And after the PINKSWAP deployed and run for a well with stable performance, the PINK token will be introduced. 
  
 ## Value
 > In which way your project will benefit Polkadot
-> - A fully decentralized protocol for automated liquidity provision on polkdot.
+> - A fully decentralized protocol for automated liquidity provision on Polkadot.
 > - Enable anyone to create new markets and provide liquidity of new DOT.
-> - Popularize polkdot technology and accelerate ecosystem construction
+> - Popularize Polkadot technology and accelerate ecosystem construction
 
 ## Deliverables
 
 1.Provide a framwork for bonding curve design
-2.Introduce a new token in polkdot community - PINK
-3.Create a UI and to improve the ecosystem
+
+2.Introduce a new token ticker in Polkadot community - PINK
+
+3.Create a UI to improve  the ecosystem
+
 ## Roadmap and Milestones
 
 | No. | Timeline | Milestones |
