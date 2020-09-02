@@ -14,12 +14,8 @@ A substrate chain with fully function of AMM swap and govanence.
 >   A AMM bonding curve will be applied and will be improved as community developing. 
 
 ## System Overview
-Token ticker: PINK
-The AMM bonding curve could be upgraded based on PINK token holder.
-Trading fees will be paid on any token that the liquidity provider intented to use. Primarily would be New DOT. Gas fees will be paid on New DOT.
 
-How this system will run
->  As all we have seen and engaged these days about DEFI and AMM platform in Ethereum ecosystem, they are the great breakthrough in DEX, we thought which is the exactly the one point that Polkadot is designed to and natively compatible of.
+As all we have seen and engaged these days about DEFI and AMM platform in Ethereum ecosystem, they are the great breakthrough in DEX, we thought which is the exactly the one point that Polkadot is designed to and natively compatible of.
 
 >  So we are trying to design a mechanism on Polkadot which somehow like uniswap on Ethereum, which is aiming on 3 targets as follows:
 
@@ -34,6 +30,9 @@ Along with the first target to be realized, the second one for other users to sw
 This part will almost the same of uniswap provided for ethereum.
 
 Basically, the 3 targets above is the goal for PINKSWAP to provide and achive.
+Token ticker: PINK
+The AMM bonding curve could be upgraded based on PINK token holder.
+Trading fees will be paid on any token that the liquidity provider intented to use. Primarily would be New DOT. Gas fees will be paid on New DOT.
 
 ## Value
 > In which way your project will benefit Polkadot
